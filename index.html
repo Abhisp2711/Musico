@@ -12,19 +12,19 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script src="/JS/script.js" defer></script>
   </head>
   <body>
     <conatainer id="container" class="container flex">
       <h3 class="logo">Musico</h3>
-      <div class="progress-container">
+      <div class="progress-container" id="progress-container">
         <div class="progress" id="progress"></div>
       </div>
       <div class="music-player">
-        <div class="button flex">
+        <div class="button flex" id="btn">
           <div class="rotator">
-            <i class="fas fa-music move"></i>
-            <i class="fas fa-compact-disc fa-2x rotating"></i>
+            <i class="fas fa-music"></i>
+            <i class="fas fa-compact-disc fa-2x"></i>
           </div>
           <div class="prev btn" id="prev">
             <i class="fas fa-backward fa-2x"></i>
@@ -37,6 +37,7 @@
           </div>
         </div>
       </div>
+      <audio src="/Music/hey.mp3" id="audio"></audio>
     </conatainer>
   </body>
 </html>

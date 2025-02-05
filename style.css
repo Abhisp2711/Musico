@@ -5,6 +5,96 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --primary-color: #ffb6c1;
+  --secondary-color: #4b0082;
+}
 
 body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(86deg, #ffb6c1, #fffacd);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  color: var(--secondary-color);
+}
+h3::first-letter {
+  font-size: 40px;
+  color: var(--primary-color);
+  font-family: cursive;
+  letter-spacing: 8px;
+  text-decoration: underline;
+}
+.progress-container {
+  width: 300px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.progress {
+  height: 4px;
+  background-color: #fff;
+  width: 10%;
+  transition: width 0.1s linear;
+}
+.button {
+  flex-direction: row;
+  justify-content: center;
+  gap: 35px;
+  box-shadow: 1px 1px 5px rgba(75, 2, 130, 0.8);
+  width: 400px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #fffacd;
+}
+.play {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+.next {
+  flex-grow: 2;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+.prev {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+/* for rotating disc while music is playing */
+.rotator {
+  flex-grow: 1;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: spin 2s linear infinite;
+}
+@keyframes move {
+  0% {
+    transform: scale(0) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.2) translate(10px, 20px);
+  }
+}
+.move {
+  color: var(--secondary-color);
+  animation: move 2s linear infinite;
 }
