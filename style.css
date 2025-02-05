@@ -43,7 +43,7 @@ h3::first-letter {
 .progress {
   height: 4px;
   background-color: #fff;
-  width: 10%;
+  width: 0%;
   transition: width 0.1s linear;
 }
 .button {
