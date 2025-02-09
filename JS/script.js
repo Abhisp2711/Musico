@@ -30,6 +30,9 @@ songs = ['aaj_ki_rat',
     'tut_gayi_chudiya',
     'maiya_ashoda',
     'ki_jab_mai_jayada',
+    'aa_milo_kahi',
+    'aur_roye_hamare_liye',
+    'khawab_sa_lage',
 ];
 
 //get song index 
