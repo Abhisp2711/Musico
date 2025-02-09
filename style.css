@@ -72,8 +72,6 @@ h3::first-letter {
 /* Volume  */
 #volume {
   display: none;
-  transform: rotate(-90deg);
-  background-color: var(--primary-color);
 }
 /* for rotating disc while music is playing */
 .rotator {
