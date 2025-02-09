@@ -75,7 +75,42 @@ playBtn.addEventListener("click", () => {
         pauseSong();
     }
 });
+// Auto play next song when one song get completed
+audio.addEventListener('ended', playNextSong);
 
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+    if (e.code === "Space") {
+        const isPlaying = playIcon.classList.contains('fa-play');
+        if (isPlaying) {
+            playSong();
+        }
+        else {
+            pauseSong();
+        }
+    }
+    else if (e.code === "ArrowRight") {
+        playNextSong();
+    }
+    else if(e.code === "ArrowLeft"){ 
+        playPrevSong();
+    }
+    else if (e.code === "ArrowUp") {
+        audio.volume = Math.min(audio.volume + 0.1, 1);
+        volumeSlider.value = audio.volume;
+    }
+    else if (e.code === "ArrowDown") {
+        audio.volume = Math.max(audio.volume - 0.1, 0);
+        volumeSlider.value = audio.volume;
+    }
+});
+
+// Volume Control
+const volumeSlider = document.getElementById('volume');
+volumeSlider.addEventListener('input', (e) => {
+    audio.volume = e.target.value;
+})
 // Update Progress Bar
 audio.addEventListener("timeupdate", () => {
     const progressPercent = (audio.currentTime / audio.duration) * 100;
@@ -94,5 +129,7 @@ progressContainer.addEventListener("click", (e) => {
 nextBtn.addEventListener('click', playNextSong);
 
 prevBtn.addEventListener('click', playPrevSong);
+
+
 
 
