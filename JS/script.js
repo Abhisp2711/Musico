@@ -23,12 +23,13 @@ songs = ['aaj_ki_rat',
     'bole_chudiyaa',
     'chhote_chhote_bhaiyoke',
     'Dholak_me_tak',
-    'Dholak_me_tak',
     'doli_saja_ke',
     'ghumaro',
     'lal_dupata',
     'payal_hai_chhankai',
     'tut_gayi_chudiya',
+    'maiya_ashoda',
+    'ki_jab_mai_jayada',
 ];
 
 //get song index 
