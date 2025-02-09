@@ -8,6 +8,8 @@ const move = document.querySelector(".fa-music");
 const audio = document.getElementById("audio");
 const progressContainer = document.getElementById("progress-container");
 const progress = document.getElementById("progress");
+
+
 // Play Music
 function playSong() {
     playIcon.classList.replace("fa-play", "fa-pause");
@@ -47,6 +49,7 @@ function pauseSong() {
     move.classList.remove("move");  // Stop rotating
 }
 
+
 // next song
 function playNextSong() {
     songIndex++;
@@ -78,6 +81,14 @@ playBtn.addEventListener("click", () => {
 // Auto play next song when one song get completed
 audio.addEventListener('ended', playNextSong);
 
+//When playing 
+audio.addEventListener('play', () => {
+    playIcon.classList.replace('fa-play', 'fa-pause')
+});
+//When pause
+audio.addEventListener('pause', () => {
+    playIcon.classList.replace('fa-pause', 'fa-play');
+});  
 
 // Keyboard shortcuts
 document.addEventListener('keydown', (e) => {
